@@ -37,7 +37,7 @@ def load_and_plot_audio(file_bytes):
 # --- 3. SIDEBAR (Settings) ---
 with st.sidebar:
     st.title("⚙️ Settings")
-    api_key = st.text_input("AIzaSyDKqMnaBBiS5NwC6yNTQPD90C2N69BlHEM", type="password")
+    api_key = st.text_input("AIzaSyDKqMnaBBiS5NwC6yNTQPD90C2N69BlHEM")
     model_choice = st.selectbox("Reasoning Engine", ["gemini-2.5-flash", "gemini-3-pro-preview"])
     st.info("The Pro model provides deeper clinical correlation.")
 
@@ -103,3 +103,4 @@ if uploaded_file and api_key:
 
 elif not api_key:
     st.warning("Please enter your API Key in the sidebar to begin.")
+
